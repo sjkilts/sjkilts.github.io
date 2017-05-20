@@ -1,0 +1,76 @@
+<div class="sidebar">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <h5 class="post-description">{{ page.description }}</h5>
+  </header>
+
+<<<<<<< HEAD
+  <p>{{ page.sidebar }}</p>
+
+  <ul>
+    <li><a href="/portfolio">view all</a></li>
+  {% assign project = site.portfolio | group_by:"category" %}
+  {% for p in project %}
+
+    <li><a href="/portfolio">{{ p.name }}</a></li>
+    <!-- <ul>
+      {% for work in p.items %}
+      <li><a href="{{ work.url }}">{{ work.title }}</a></li>
+      {% endfor %}      
+    </ul> -->
+
+  {% endfor %}
+  </ul>
+=======
+  <p><!--this copy is basically taken straight from jessica hische's site. probably aught to change it up a little-->
+    As a designer, I strive to create beautiful legible work with loads of personality and a high level of technical precision. To inquire about a new project or to license existing artwork, hmu
+  </p>
+
+  <ul> <!-- this needs to be something like {{for category in portfolio.category }}
+  list a name for each category
+  {{if category == category }}
+  list the project
+  {{endif}}
+  {{ endfor }}
+  but I'm not exactly sure yet. Needs to link also to each sorted view -->
+    <li>
+      <a href="/">Client Work</a>
+    </li>
+    <ul>
+      <li>
+        project 1
+      </li>
+    </ul>
+    <li>
+      <a href="/">Personal Projects</a>
+    </li>
+    <ul>
+      <li>
+        project 1
+      </li>
+    </ul>
+    <li>
+      <a href="/">Artwork</a>
+    </li>
+    <ul>
+      <li>
+        project 1
+      </li>
+    </ul>
+</ul>
+
+<div class="">
+  <ul>
+  {% for project in site.portfolio %}
+    {% if project.category == true %}
+    <li>
+      <a class="" href="{{ project.url | prepend site.baseurl }}">{{ project.category }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>
+>>>>>>> portfolio page redesign & content updates
+
+</div>
